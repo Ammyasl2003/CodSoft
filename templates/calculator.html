@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="tool-container">
+    <h1>Calculator</h1>
+    <form method="POST">
+        <div class="input-group">
+            <label for="num1">First Number:</label>
+            <input type="text" id="num1" name="num1" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="num2">Second Number:</label>
+            <input type="text" id="num2" name="num2" required>
+        </div>
+        
+        <div class="operation-group">
+            <label>Operation:</label>
+            <div class="operations">
+                <input type="radio" id="add" name="operation" value="add" checked>
+                <label for="add">Addition (+)</label>
+                
+                <input type="radio" id="subtract" name="operation" value="subtract">
+                <label for="subtract">Subtraction (-)</label>
+                
+                <input type="radio" id="multiply" name="operation" value="multiply">
+                <label for="multiply">Multiplication (*)</label>
+                
+                <input type="radio" id="divide" name="operation" value="divide">
+                <label for="divide">Division (/)</label>
+            </div>
+        </div>
+        
+        <button type="submit">Calculate</button>
+    </form>
+    
+    {% if result is not none %}
+    <div class="result {% if 'Error' in result %}error{% endif %}">
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

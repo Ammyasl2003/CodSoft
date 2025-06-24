@@ -1,0 +1,340 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+main {
+    padding: 2rem;
+    min-height: calc(100vh - 150px);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Tool Buttons on Home Page */
+.tool-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tool-button {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tool-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tool-button h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+/* Tool Container Styles */
+.tool-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tool-container h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.operation-group {
+    margin-bottom: 1.5rem;
+}
+
+.operations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.operations label {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.operations input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.conversion-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.select-group {
+    margin-bottom: 0;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+}
+
+.result.error {
+    border-left-color: #e74c3c;
+}
+
+.result h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.password-display {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.password-display input {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.password-display button {
+    width: auto;
+    padding: 0 1rem;
+}
+
+.password-strength {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.strength-indicator {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .conversion-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .operations {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* To-Do List Styles */
+.todo-form {
+    margin-bottom: 2rem;
+}
+
+.todo-form .input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.todo-form input {
+    flex-grow: 1;
+}
+
+.task-list {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.task {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task.completed {
+    opacity: 0.7;
+    background-color: #f8f9fa;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.task-id {
+    font-weight: bold;
+    color: #3498db;
+    min-width: 2rem;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-date {
+    font-size: 0.8rem;
+    color: #95a5a6;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.complete-btn, .delete-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.complete-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #27ae60;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.no-tasks {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    color: #7f8c8d;
+}

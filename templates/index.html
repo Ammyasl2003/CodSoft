@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to CodSoft</h1>
+ 
+    
+    <div class="tool-buttons">
+        <a href="{{ url_for('calculator') }}" class="tool-button">
+            <h2>Calculator</h2>
+            <p>Perform basic arithmetic operations</p>
+        </a>
+        
+        <a href="{{ url_for('password_generator') }}" class="tool-button">
+            <h2>Password Generator</h2>
+            <p>Create strong, random passwords</p>
+        </a>
+        
+        <a href="{{ url_for('todo_list') }}" class="tool-button">
+            <h2>To-Do List</h2>
+            <p>Manage your tasks efficiently</p>
+        </a>
+    </div>
+</div>
+{% endblock %}
