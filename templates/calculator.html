@@ -35,10 +35,10 @@
     </form>
     
     {% if result is not none %}
-    <div class="result {% if 'Error' in result %}error{% endif %}">
+    <div class="result {% if result is string and 'Error' in result %}error{% endif %}">
         <h2>Result:</h2>
         <p>{{ result }}</p>
     </div>
-    {% endif %}
+{% endif %}
 </div>
 {% endblock %}
